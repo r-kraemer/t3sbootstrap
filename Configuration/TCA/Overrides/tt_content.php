@@ -1672,3 +1672,37 @@ if ( $extconf['preview'] ) {
 
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['t3sbootstrap_pi1'] = 'recursive,select_key,pages';
 
+h ($t3sbsContent as $t3sb) {
+		$GLOBALS['TCA']['tt_content']['types'][trim($t3sb)]['previewRenderer'] = \T3SBS\T3sbootstrap\Backend\Preview\DefaultPreviewRenderer::class;
+	}
+
+	$containers = [
+		'two_columns',
+		'three_columns',
+		'four_columns',
+		'six_columns',
+		'row_columns',
+		'card_wrapper',
+		'button_group',
+		'autoLayout_row',
+		'background_wrapper',
+		'parallax_wrapper',
+		' container',
+		'carousel_container',
+		'collapsible_container',
+		'collapsible_accordion',
+		'modal',
+		'tabs_container',
+		'tabs_tab',
+		'listGroup_wrapper',
+		'masonry_wrapper',
+		'swiper_container',
+		'toast_container'
+	];
+	foreach ($containers as $container) {
+		$GLOBALS['TCA']['tt_content']['types'][trim($container)]['previewRenderer'] = \T3SBS\T3sbootstrap\Backend\Preview\T3sbPreviewRenderer::class;
+	}
+}
+
+
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['t3sbootstrap_pi1'] = 'recursive,select_key,pages';

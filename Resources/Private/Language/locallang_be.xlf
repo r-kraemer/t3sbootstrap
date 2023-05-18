@@ -399,4 +399,18 @@
 
 		</body>
 	</file>
+</xliff>trans-unit id="backend_layout.obc">
+				<source>Optional bottom content</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexforms.appearance">
+				<source>Appearance</source>
+			</trans-unit>
+			<trans-unit id="flexforms.effect">
+				<source>Fade effect</source>
+			</trans-unit>
+
+		</body>
+	</file>
 </xliff>

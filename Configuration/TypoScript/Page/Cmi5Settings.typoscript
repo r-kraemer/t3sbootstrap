@@ -1,0 +1,56 @@
+page.10.settings.config {
+  cmiObjpropLang = {$bootstrap.config.cmiObjpropLang}
+  cmiDatamodelAuActtype = {$bootstrap.config.cmiDatamodelAuActtype}
+  cmiDatamodelAuTitle = {$bootstrap.config.cmiDatamodelAuTitle}
+  cmiDatamodelAuDescr = {$bootstrap.config.cmiDatamodelAuDescr}
+  cmiDatamodelAuId = {$bootstrap.config.cmiDatamodelAuId}
+  cmiDatamodelAuMoveon = {$bootstrap.config.cmiDatamodelAuMoveon}
+  cmiDatamodelAuMasteryscore = {$bootstrap.config.cmiDatamodelAuMasteryscore}
+  cmiDatamodelAuUrl = {$bootstrap.config.cmiDatamodelAuUrl}
+  cmiDatamodelCourseTitle = {$bootstrap.config.cmiDatamodelCourseTitle}
+  cmiDatamodelCourseDescr = {$bootstrap.config.cmiDatamodelCourseDescr}
+  cmiDatamodelCourseId = {$bootstrap.config.cmiDatamodelCourseId}
+  cmiEnabled = {$bootstrap.config.cmiEnabled}
+}
+config {
+  compressCss = 0
+  compressJs = 0
+  concatenateCss = 0
+  concatenateJs = 0
+  moveJsFromHeaderToFooter = 0
+}
+
+page {
+	includeCSS {
+        plyrCss = https://cdn.plyr.io/3.7.8/plyr.css
+      	custom3Css = EXT:t3sbootstrap/Resources/Public/CmiFive/Css/custom3.css
+        #swordCss = https://unpkg.com/spoken-word/css/style.css
+        bsicons = /fileadmin/bootstrap-icons/bootstrap-icons.css
+	}
+	includeJS {
+        JSZip = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/jszip.min.js
+        cmi5Controller = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/cmi5Controller-new.js
+        #xapiDashboard = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/xapidashboard.js
+        xapiCollection = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/xapicollection.js
+        cryptojs = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/cryptojs_v3.1.2.js
+        utf8TextEncoding = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/utf8-text-encoding.js
+        activitytypes = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/activitytypes.js
+        verbs = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/verbs.js
+        xapiwrapper= EXT:t3sbootstrap/Resources/Public/CmiFive/Js/xapiwrapper.js
+        xapistatement = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/xapistatement.js
+        xapiUtil = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/xapi-util.js
+        xapiLaunch = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/xapi-launch.js
+        #lifecycle = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/lifecycle.es5.js
+        cmi5Wrapper = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/cmi5Wrapper-new.js
+        xmlwriter = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/XMLWriter.js
+        cmi5xml = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/cmi5xml.js
+        echarts = https://cdn.jsdelivr.net/npm/echarts@5.3.0-rc.1/dist/echarts.min.js
+        textHighlighter = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/TextHighlighter.js
+        progressCircle = https://pie-meister.github.io/PieMeister-with-Progress.min.js
+       	plyrJs = https://cdn.plyr.io/3.7.8/plyr.js
+        echarts = https://cdn.jsdelivr.net/npm/echarts@5.3.0-rc.1/dist/echarts.min.js
+        swal = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/sweetalert.min.js
+        moment = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/moment.min.js
+        #sword = EXT:t3sbootstrap/Resources/Public/CmiFive/Js/spoken-word.js
+	}
+}

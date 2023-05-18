@@ -233,3 +233,29 @@ CREATE TABLE pages (
 	tx_t3sbootstrap_navigationhover varchar(30) DEFAULT '' NOT NULL,
 	tx_t3sbootstrap_navigationbgcolor varchar(30) DEFAULT '' NOT NULL,
 );
+p_media_width varchar(255) default '' not null,
+	tx_t3sbootstrap_shift_vertical int(2) DEFAULT '0' NOT NULL,
+	tx_t3sbootstrap_shift_horizontal int(2) DEFAULT '0' NOT NULL,
+);
+
+#
+# Table structure for table 'pages'
+#
+CREATE TABLE pages (
+	tx_t3sbootstrap_cmi_generatexml tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	tx_t3sbootstrap_container varchar(255) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_linkToTop tinyint(4) DEFAULT '0' NOT NULL,
+	tx_t3sbootstrap_smallColumns varchar(1) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_dropdownRight tinyint(4) DEFAULT '0' NOT NULL,
+	tx_t3sbootstrap_mobileOrder varchar(255) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_breakpoint varchar(7) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_fontawesome_icon varchar(100) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_icon_only tinyint(4) DEFAULT '0' NOT NULL,
+	tx_t3sbootstrap_megamenu tinyint(4) DEFAULT '0' NOT NULL,
+	tx_t3sbootstrap_titlecolor varchar(30) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_subtitlecolor varchar(30) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_navigationcolor varchar(30) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_navigationactivecolor varchar(30) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_navigationhover varchar(30) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_navigationbgcolor varchar(30) DEFAULT '' NOT NULL,
+);

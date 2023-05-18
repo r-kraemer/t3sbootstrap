@@ -420,3 +420,13 @@ $GLOBALS['PAGES_TYPES'][$menuheader] = [
 	'Configuration/TSConfig/Registered/Callouts.tsconfig',
 	'Add BS-Callouts options in Layout field'
 );
+tUtility::registerPageTSConfigFile(
+	't3sbootstrap',
+	'Configuration/TSConfig/Registered/Header.tsconfig',
+	'Remove CType header'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+	't3sbootstrap',
+	'Configuration/TSConfig/Registered/Callouts.tsconfig',
+	'Add BS-Callouts options in Layout field'
+);

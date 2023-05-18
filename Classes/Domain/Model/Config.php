@@ -4062,3 +4062,500 @@ class Config extends AbstractEntity
 	
 
 }
+* Sets the lightboxSelection
+	 *
+	 * @param string $lightboxSelection
+	 * @return void
+	 */
+	public function setLightboxSelection($lightboxSelection)
+	{
+		$this->lightboxSelection = $lightboxSelection;
+	}
+
+	/**
+	 * Returns the magnifying
+	 *
+	 * @return bool $magnifying
+	 */
+	public function getMagnifying()
+	{
+		return $this->magnifying;
+	}
+
+	/**
+	 * Sets the magnifying
+	 *
+	 * @param bool $magnifying
+	 * @return void
+	 */
+	public function setMagnifying($magnifying)
+	{
+		$this->magnifying = $magnifying;
+	}
+
+	/**
+	 * Returns the sectionmenuAnchorOffset
+	 *
+	 * @return int $sectionmenuAnchorOffset
+	 */
+	public function getSectionmenuAnchorOffset()
+	{
+		return $this->sectionmenuAnchorOffset;
+	}
+
+	/**
+	 * Sets the sectionmenuAnchorOffset
+	 *
+	 * @param int $sectionmenuAnchorOffset
+	 * @return void
+	 */
+	public function setSectionmenuAnchorOffset($sectionmenuAnchorOffset)
+	{
+		$this->sectionmenuAnchorOffset = $sectionmenuAnchorOffset;
+	}
+
+	/**
+	 * Returns the sectionmenuScrollspyThreshold
+	 *
+	 * @return string sectionmenuScrollspyThreshold
+	 */
+	public function getSectionmenuScrollspyThreshold()
+	{
+		return $this->sectionmenuScrollspyThreshold;
+	}
+	
+	/**
+	 * Sets the sectionmenuScrollspyThreshold
+	 *
+	 * @param string $sectionmenuScrollspyThreshold
+	 * @return void
+	 */
+	public function setSectionmenuScrollspyThreshold($sectionmenuScrollspyThreshold)
+	{
+		$this->sectionmenuScrollspyThreshold = $sectionmenuScrollspyThreshold;
+	}
+
+	/**
+	 * Returns the sectionmenuScrollspyRootMargin
+	 *
+	 * @return string sectionmenuScrollspyRootMargin
+	 */
+	public function getSectionmenuScrollspyRootMargin()
+	{
+		return $this->sectionmenuScrollspyRootMargin;
+	}
+	
+	/**
+	 * Sets the sectionmenuScrollspyRootMargin
+	 *
+	 * @param string $sectionmenuScrollspyRootMargin
+	 * @return void
+	 */
+	public function setSectionmenuScrollspyRootMargin($sectionmenuScrollspyRootMargin)
+	{
+		$this->sectionmenuScrollspyRootMargin = $sectionmenuScrollspyRootMargin;
+	}
+
+	/**
+	 * Returns the sectionmenuStickyTop
+	 *
+	 * @return bool $sectionmenuStickyTop
+	 */
+	public function getSectionmenuStickyTop()
+	{
+		return $this->sectionmenuStickyTop;
+	}
+
+	/**
+	 * Sets the sectionmenuStickyTop
+	 *
+	 * @param bool $sectionmenuStickyTop
+	 * @return void
+	 */
+	public function setSectionmenuStickyTop($sectionmenuStickyTop)
+	{
+		$this->sectionmenuStickyTop = $sectionmenuStickyTop;
+	}
+
+	/**
+	 * Returns the sectionmenuScrollspy
+	 *
+	 * @return bool $sectionmenuScrollspy
+	 */
+	public function getSectionmenuScrollspy()
+	{
+		return $this->sectionmenuScrollspy;
+	}
+
+	/**
+	 * Sets the sectionmenuScrollspy
+	 *
+	 * @param bool $sectionmenuScrollspy
+	 * @return void
+	 */
+	public function setSectionmenuScrollspy($sectionmenuScrollspy)
+	{
+		$this->sectionmenuScrollspy = $sectionmenuScrollspy;
+	}
+
+	/**
+	 * Returns the backgroundImageEnable
+	 *
+	 * @return bool $backgroundImageEnable
+	 */
+	public function getBackgroundImageEnable()
+	{
+		return $this->backgroundImageEnable;
+	}
+
+	/**
+	 * Sets the backgroundImageEnable
+	 *
+	 * @param bool $backgroundImageEnable
+	 * @return void
+	 */
+	public function setBackgroundImageEnable($backgroundImageEnable)
+	{
+		$this->backgroundImageEnable = $backgroundImageEnable;
+	}
+
+	/**
+	 * Returns the backgroundImageSlide
+	 *
+	 * @return bool $backgroundImageSlide
+	 */
+	public function getBackgroundImageSlide()
+	{
+		return $this->backgroundImageSlide;
+	}
+
+	/**
+	 * Sets the backgroundImageSlide
+	 *
+	 * @param bool $backgroundImageSlide
+	 * @return void
+	 */
+	public function setBackgroundImageSlide($backgroundImageSlide)
+	{
+		$this->backgroundImageSlide = $backgroundImageSlide;
+	}
+
+	/**
+	 * Returns the shrinkingNavPadding
+	 *
+	 * @return string $shrinkingNavPadding
+	 */
+	public function getShrinkingNavPadding()
+	{
+		return $this->shrinkingNavPadding;
+	}
+
+	/**
+	 * Sets the shrinkingNavPadding
+	 *
+	 * @param string $shrinkingNavPadding
+	 * @return void
+	 */
+	public function setShrinkingNavPadding($shrinkingNavPadding)
+	{
+		$this->shrinkingNavPadding = $shrinkingNavPadding;
+	}
+
+	/**
+	 * Returns the sidebarMenuPosition
+	 *
+	 * @return string $sidebarMenuPosition
+	 */
+	public function getSidebarMenuPosition()
+	{
+		return $this->sidebarMenuPosition;
+	}
+
+	/**
+	 * Sets the shrinkingNavPadding
+	 *
+	 * @param string $sidebarMenuPosition
+	 * @return void
+	 */
+	public function setSidebarMenuPosition($sidebarMenuPosition)
+	{
+		$this->sidebarMenuPosition = $sidebarMenuPosition;
+	}
+
+	/**
+	 * Returns the langMenuWithFaIcon
+	 *
+	 * @return bool $langMenuWithFaIcon
+	 */
+	public function getLangMenuWithFaIcon()
+	{
+		return $this->langMenuWithFaIcon;
+	}
+
+	/**
+	 * Sets the langMenuWithFaIcon
+	 *
+	 * @param bool $langMenuWithFaIcon
+	 * @return void
+	 */
+	public function setLangMenuWithFaIcon($langMenuWithFaIcon)
+	{
+		$this->langMenuWithFaIcon = $langMenuWithFaIcon;
+	}
+
+	/**
+	 * Returns the subheaderColor
+	 *
+	 * @return string $subheaderColor
+	 */
+	public function getSubheaderColor()
+	{
+		return $this->subheaderColor;
+	}
+
+	/**
+	 * Sets the subheaderColor
+	 *
+	 * @param string $subheaderColor
+	 * @return void
+	 */
+	public function setSubheaderColor($subheaderColor)
+	{
+		$this->subheaderColor = $subheaderColor;
+	}
+
+	/**
+	 * Returns the dateFormat
+	 *
+	 * @return string $dateFormat
+	 */
+	public function getDateFormat()
+	{
+		return $this->dateFormat;
+	}
+
+	/**
+	 * Sets the dateFormat
+	 *
+	 * @param string $dateFormat
+	 * @return void
+	 */
+	public function setDateFormat($dateFormat)
+	{
+		$this->dateFormat = $dateFormat;
+	}
+
+	/**
+	 * Returns the favicon
+	 *
+	 * @return string $favicon
+	 */
+	public function getFavicon()
+	{
+		return $this->favicon;
+	}
+
+	/**
+	 * Sets the favicon
+	 *
+	 * @param string $favicon
+	 * @return void
+	 */
+	public function setFavicon($favicon)
+	{
+		$this->favicon = $favicon;
+	}
+
+	/**
+	 * Returns faLinkIcons
+	 *
+	 * @return bool $faLinkIcons
+	 */
+	public function getFaLinkIcons()
+	{
+		return $this->faLinkIcons;
+	}
+
+	/**
+	 * Sets the faLinkIcons
+	 *
+	 * @param bool $faLinkIcons
+	 * @return void
+	 */
+	public function setFaLinkIcons($faLinkIcons)
+	{
+		$this->faLinkIcons = $faLinkIcons;
+	}
+
+	/**
+	 * Returns cardFlipperOnClick
+	 *
+	 * @return bool $cardFlipperOnClick
+	 */
+	public function getCardFlipperOnClick()
+	{
+		return $this->cardFlipperOnClick;
+	}
+
+	/**
+	 * Sets the cardFlipperOnClick
+	 *
+	 * @param bool $cardFlipperOnClick
+	 * @return void
+	 */
+	public function setCardFlipperOnClick($cardFlipperOnClick)
+	{
+		$this->cardFlipperOnClick = $cardFlipperOnClick;
+	}
+
+	/**
+	 * Returns lastModifiedContentElement
+	 *
+	 * @return bool $lastModifiedContentElement
+	 */
+	public function getLastModifiedContentElement()
+	{
+		return $this->lastModifiedContentElement;
+	}
+
+	/**
+	 * Sets the lastModifiedContentElement
+	 *
+	 * @param bool $lastModifiedContentElement
+	 * @return void
+	 */
+	public function setLastModifiedContentElement($lastModifiedContentElement)
+	{
+		$this->lastModifiedContentElement = $lastModifiedContentElement;
+	}
+
+	/**
+	 * Returns recentlyUpdatedContentElements
+	 *
+	 * @return bool $recentlyUpdatedContentElements
+	 */
+	public function getRecentlyUpdatedContentElements()
+	{
+		return $this->recentlyUpdatedContentElements;
+	}
+
+	/**
+	 * Sets the recentlyUpdatedContentElements
+	 *
+	 * @param bool $recentlyUpdatedContentElements
+	 * @return void
+	 */
+	public function setRecentlyUpdatedContentElements($recentlyUpdatedContentElements)
+	{
+		$this->recentlyUpdatedContentElements = $recentlyUpdatedContentElements;
+	}
+
+	/**
+	 * Returns updated
+	 *
+	 * @return int $updated
+	 */
+	public function getUpdated()
+	{
+		return $this->updated;
+	}
+
+	/**
+	 * Sets the updated
+	 *
+	 * @param int $updated
+	 * @return void
+	 */
+	public function setUpdated($updated)
+	{
+		$this->updated = $updated;
+	}
+
+	/**
+	 * Returns gridupdated
+	 *
+	 * @return int $gridupdated
+	 */
+	public function getGridupdated()
+	{
+		return $this->gridupdated;
+	}
+
+	/**
+	 * Sets the gridupdated
+	 *
+	 * @param int $gridupdated
+	 * @return void
+	 */
+	public function setGridupdated($gridupdated)
+	{
+		$this->gridupdated = $gridupdated;
+	}
+
+	/**
+	 * Returns the sidebarSectionMobile
+	 *
+	 * @return bool $sidebarSectionMobile
+	 */
+	public function getSidebarSectionMobile()
+	{
+		return $this->sidebarSectionMobile;
+	}
+
+	/**
+	 * Sets the sidebarSectionMobile
+	 *
+	 * @param bool $sidebarSectionMobile
+	 * @return void
+	 */
+	public function setSidebarSectionMobile($sidebarSectionMobile)
+	{
+		$this->sidebarSectionMobile = $sidebarSectionMobile;
+	}
+
+	/**
+	 * Returns the sectionmenuIcons
+	 *
+	 * @return bool $sectionmenuIcons
+	 */
+	public function getSectionmenuIcons()
+	{
+		return $this->sectionmenuIcons;
+	}
+
+	/**
+	 * Sets the sectionmenuIcons
+	 *
+	 * @param bool $sectionmenuIcons
+	 * @return void
+	 */
+	public function setSectionmenuIcons($sectionmenuIcons)
+	{
+		$this->sectionmenuIcons = $sectionmenuIcons;
+	}
+
+
+
+	/**
+	 * Returns the navbarDarkMode
+	 *
+	 * @return bool $navbarDarkMode
+	 */
+	public function getNavbarDarkMode()
+	{
+		return $this->navbarDarkMode;
+	}
+
+	/**
+	 * Sets the navbarDarkMode
+	 *
+	 * @param bool $navbarDarkMode
+	 * @return void
+	 */
+	public function setNavbarDarkMode($navbarDarkMode)
+	{
+		$this->navbarDarkMode = $navbarDarkMode;
+	}
+	
+
+}

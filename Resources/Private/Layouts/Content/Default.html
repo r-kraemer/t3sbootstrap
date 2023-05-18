@@ -40,3 +40,19 @@
 </f:if>	
 </f:spaceless>
 </html>
+l="true">
+						<f:render partial="Header/All" arguments="{_all}" />
+					</f:render>
+					<f:render section="Main" arguments="{_all}" />
+				</div>
+			</f:else>
+			</f:if>
+		</f:link.typolink>
+		<f:if condition="{newLine}">
+			<div class="w-100"></div>
+		</f:if>
+		{containerPost -> f:format.raw()}
+	</f:else>
+</f:if>
+</f:spaceless>
+</html>

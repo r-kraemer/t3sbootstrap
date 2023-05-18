@@ -64,3 +64,11 @@
 	});
 
 })(bootstrap);
+pe>[data-bs-toggle="dropdown"]');
+      if (toggle.classList.contains('show')) {
+        getDropdown(toggle).toggle();
+      }
+    });
+  });
+
+})(bootstrap);
