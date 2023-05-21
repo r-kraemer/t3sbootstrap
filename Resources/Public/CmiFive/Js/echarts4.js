@@ -1,6 +1,6 @@
 // function: Wer hat welche H5P-Interaktionen mit welchem Erfolg bearbeitet?
 
-var xc = new ADL.Collection();
+//var xc = new ADL.Collection();
 
 function echarts4_(event, container, page, echartQuery) {
   let data = getStatementsAnswered("answered", page, echartQuery);
@@ -18,48 +18,45 @@ function getStatementsAnswered(verb, page, echartQuery) {
     since = "",
     until = "",
     stmtsQ_,
-    qStored;
+    qStored,
+    data = [];
+  // check if previuos data of echarts4 in sessiostorage and get data if applicable
   if (stmtsQ) {
     stmtsQ = JSON.parse(stmtsQ);
     for (let i = 0; i < stmtsQ.length; i++) {
       if (Object.keys(stmtsQ[i]).includes(echartQuery)) stmtsQ_ = stmtsQ[i];
     }
-  }
-  stmtsQ = stmtsQ_;
-  if (
-    stmtsQ &&
-    Object.keys(stmtsQ) !== "undefined" &&
-    Object.keys(stmtsQ).includes(echartQuery)
-  ) {
-    until = new Date();
-    let l = stmtsQ[echartQuery].length - 1;
-    since = stmtsQ[echartQuery][l]["timestamp"];
-    stmtsQ = stmtsQ[echartQuery];
-    cmi5Controller[echartQuery] = stmtsQ;
-    qStored = true;
-  }
+    if (stmtsQ_) {
+      until = new Date();
+      let l = stmtsQ_[echartQuery].length - 1;
+      since = stmtsQ_[echartQuery][l]["timestamp"];
+      stmtsQ_ = stmtsQ_[echartQuery];
+      qStored = true;
+    }
+  } else stmtsQ = [];
+  // query relevant statements in LRS and get selection
   let selection = bm.getStatementsBase(
-      verb,
-      "", //agent
-      "", //registration
-      "", //sessionid
-      since,
-      until,
-      true, //relatedactivities
-      true, //relatedagents
-      "ids", //format
-      "", //activity
-      "", //page
-      true, //more
-      cmi5Controller.activityId, //extensionsActivityId
-      echartQuery //query
-    ),
-    data = [];
-  xc.append(selection);
-  console.log(xc);
-  //console.log(xc.select("actor.account.name"));
-  console.log(xc.where('verb.id = "http://adlnet.gov/expapi/verbs/answered"'));
-  console.log(xc.groupBy("object.id"));
+    verb,
+    "", //agent
+    "", //registration
+    "", //sessionid
+    since,
+    until,
+    true, //relatedactivities
+    true, //relatedagents
+    "ids", //format
+    "", //activity
+    "", //page
+    true, //more
+    cmi5Controller.activityId, //extensionsActivityId
+    echartQuery //query
+  );
+  //xc.append(selection);
+  //console.log(xc);
+  //console.log(xc.where('verb.id = "http://adlnet.gov/expapi/verbs/answered"'));
+  //console.log(xc.groupBy("object.id"));
+  // push relevant information of selected statements to data object
+
   for (let i = 0; i < selection.length; i++) {
     if (
       typeof selection[i].actor.account !== "undefined" &&
@@ -75,32 +72,24 @@ function getStatementsAnswered(verb, page, echartQuery) {
       });
     }
   }
-  if (qStored) data.push(...stmtsQ);
+  // push previuos data in sessiostorage of echarts4 to data object if applicable
+  if (qStored) data.push(...stmtsQ_);
+  // sort data by timestamp
   data.sort(
     (b, a) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
   );
-  if (
-    cmi5Controller[echartQuery] &&
-    cmi5Controller[echartQuery].length !== data.length
-  )
-    cmi5Controller[echartQuery].push(...data);
-  else cmi5Controller[echartQuery] = data;
-  let statements = [];
-  if (
-    sessionStorage.getItem("statements") &&
-    sessionStorage.getItem("statements") !== []
-  ) {
-    statements = JSON.parse(sessionStorage.getItem("statements"));
-    let i_ = -1;
-    for (let i = 0; i < statements.length; i++) {
-      if (Object.keys(statements[i]).includes(echartQuery)) i_ = i;
-    }
-    if (i_ > -1)
-      statements[i_] = { [echartQuery]: cmi5Controller[echartQuery] };
-    else statements.push({ [echartQuery]: cmi5Controller[echartQuery] });
+  // assign sorted data to cmi5Controller[echarts4] object
+  if (data.length > 0) {
+    if (stmtsQ.length > 0) {
+      for (let i = 0; i < stmtsQ.length; i++) {
+        if (Object.keys(stmtsQ[i]).includes(echartQuery))
+          stmtsQ[i] = { [echartQuery]: data };
+      }
+    } else stmtsQ.push({ [echartQuery]: data });
+    // update data in sessionstorage
+    sessionStorage.setItem("statements", JSON.stringify(stmtsQ));
   }
-  sessionStorage.setItem("statements", JSON.stringify(statements));
-  return cmi5Controller[echartQuery];
+  return data;
 }
 
 // function: draw echart
@@ -113,7 +102,6 @@ function echartSetup(container, data_, echartQuery) {
     ["scaled"]: selection[i].result.score.scaled,
     ["success"]: selection[i].result.success
   */
-  if (cmi5Controller[echartQuery]) data_ = cmi5Controller[echartQuery];
   if (document.getElementById(container))
     container = document.getElementById(container);
   if (sessionStorage.getItem("cmi5No") == "false") {

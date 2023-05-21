@@ -173,7 +173,8 @@ statesController.prototype = {
       else {
         states = cmi5Controller.getAllowedState("bookmarkingData");
         statements = cmi5Controller.getAllowedState("statements");
-        sessionStorage.setItem("statements", JSON.stringify(statements));
+        if (statements.length > 0)
+          sessionStorage.setItem("statements", JSON.stringify(statements));
         if (states.completed === "true") {
           sessionStorage.setItem("satisfied", true);
           sessionStorage.setItem("completed", true);
@@ -713,7 +714,8 @@ statesController.prototype = {
   },
   handleStatements: function (statements) {
     //console.log(statements);
-    sessionStorage.setItem("statements", JSON.stringify(statements));
+    if (statements.length > 0)
+      sessionStorage.setItem("statements", JSON.stringify(statements));
   }
 };
 
