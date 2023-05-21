@@ -166,15 +166,14 @@ statesController.prototype = {
       );
       // create empty state data in LRS on init
       if (launchedSessions.length < 2 || initializedSessions.length < 1) {
-        cmi5Controller.sendAllowedState("Data", {});
+        cmi5Controller.sendAllowedState("bookmarkingData", {});
         cmi5Controller.sendAllowedState("statements", {});
       }
       // get state data from LRS
       else {
         states = cmi5Controller.getAllowedState("bookmarkingData");
         statements = cmi5Controller.getAllowedState("statements");
-        if (statements.length > 0)
-          sessionStorage.setItem("statements", JSON.stringify(statements));
+        sessionStorage.setItem("statements", JSON.stringify(statements));
         if (states.completed === "true") {
           sessionStorage.setItem("satisfied", true);
           sessionStorage.setItem("completed", true);
@@ -714,8 +713,7 @@ statesController.prototype = {
   },
   handleStatements: function (statements) {
     //console.log(statements);
-    if (statements.length > 0)
-      sessionStorage.setItem("statements", JSON.stringify(statements));
+    //sessionStorage.setItem("statements", JSON.stringify(statements));
   }
 };
 

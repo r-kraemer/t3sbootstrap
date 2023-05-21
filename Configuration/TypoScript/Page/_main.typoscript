@@ -28,9 +28,8 @@
 
 @import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/IncludeDefault.typoscript'
 @import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Template.typoscript'
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Cmi5Settings.typoscript'
 
 [{$bootstrap.print.enable} == 1]
 @import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Print.typoscript'
-[global]
-mport 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Print.typoscript'
 [global]

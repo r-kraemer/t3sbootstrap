@@ -2,6 +2,23 @@
 # Table structure for table 'tx_t3sbootstrap_domain_model_config'
 #
 CREATE TABLE tx_t3sbootstrap_domain_model_config (
+	cmi_enabled tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	cmi_settings varchar(100) DEFAULT '' NOT NULL,
+	cmi_objprop_lang varchar(15) DEFAULT '' NOT NULL,
+	cmi_datamodel_course_id varchar(255) DEFAULT '' NOT NULL,
+	cmi_datamodel_course_title varchar(100) DEFAULT '' NOT NULL,
+	cmi_datamodel_course_descr varchar(255) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_id varchar(255) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_title varchar(100) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_descr varchar(255) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_objectives varchar(255) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_acttype varchar(100) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_launchmethod varchar(15) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_moveon varchar(15) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_masteryscore varchar(4) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_url varchar(100) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_launchparms varchar(100) DEFAULT '' NOT NULL,
+	cmi_datamodel_au_entitlementkey varchar(100) DEFAULT '' NOT NULL,
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	deleted tinyint(3) unsigned DEFAULT '0' NOT NULL,
@@ -185,8 +202,11 @@ CREATE TABLE tt_content (
 	tx_t3sbootstrap_list_item varchar(255) DEFAULT '' NOT NULL,
 	tx_t3sbootstrap_gutters varchar(5) DEFAULT 'gx-4' NOT NULL,
 	tx_t3sbootstrap_verticalgutters varchar(5) DEFAULT 'mb-4' NOT NULL,
+	###### cmi5 ######
+	tx_t3sbootstrap_cmi5_select_statement varchar(100) DEFAULT '' NOT NULL,
+	tx_t3sbootstrap_cmi5_send_statement tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	###### cmi5 ######
 );
-
 
 CREATE TABLE tx_t3sbootstrap_list_item_inline (
     parentid int(11) DEFAULT '0' NOT NULL,
@@ -209,31 +229,6 @@ CREATE TABLE sys_file_reference (
 	tx_t3sbootstrap_imgtag tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	tx_t3sbootstrap_picture_variants int(11) default '0' not null,
 	tx_t3sbootstrap_media_width varchar(255) default '' not null,
-	tx_t3sbootstrap_shift_vertical int(2) DEFAULT '0' NOT NULL,
-	tx_t3sbootstrap_shift_horizontal int(2) DEFAULT '0' NOT NULL,
-);
-
-#
-# Table structure for table 'pages'
-#
-CREATE TABLE pages (
-	tx_t3sbootstrap_container varchar(255) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_linkToTop tinyint(4) DEFAULT '0' NOT NULL,
-	tx_t3sbootstrap_smallColumns varchar(1) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_dropdownRight tinyint(4) DEFAULT '0' NOT NULL,
-	tx_t3sbootstrap_mobileOrder varchar(255) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_breakpoint varchar(7) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_fontawesome_icon varchar(100) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_icon_only tinyint(4) DEFAULT '0' NOT NULL,
-	tx_t3sbootstrap_megamenu tinyint(4) DEFAULT '0' NOT NULL,
-	tx_t3sbootstrap_titlecolor varchar(30) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_subtitlecolor varchar(30) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_navigationcolor varchar(30) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_navigationactivecolor varchar(30) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_navigationhover varchar(30) DEFAULT '' NOT NULL,
-	tx_t3sbootstrap_navigationbgcolor varchar(30) DEFAULT '' NOT NULL,
-);
-p_media_width varchar(255) default '' not null,
 	tx_t3sbootstrap_shift_vertical int(2) DEFAULT '0' NOT NULL,
 	tx_t3sbootstrap_shift_horizontal int(2) DEFAULT '0' NOT NULL,
 );

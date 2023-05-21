@@ -1802,9 +1802,7 @@ return [
 				'type' => 'input'
 			]
 		],
-	],
-];
-enabled' => [
+		'cmi_enabled' => [
 			'exclude' => false,
 			'label' => 'Enable cmi5',
 			'accordion_id' => 11,

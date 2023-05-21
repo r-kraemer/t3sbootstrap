@@ -11,6 +11,108 @@ namespace T3SBS\T3sbootstrap\Domain\Model;
  */
 class Config extends AbstractEntity
 {
+  /**
+	 * cmiSettings
+	 *
+	 * @var string
+	 */
+	protected $cmiSettings = '';
+  /**
+	 * cmiEnabled
+	 *
+	 * @var bool
+	 */
+  protected $cmiEnabled = false;
+  /**
+	 * cmiObjpropLang
+	 *
+	 * @var string
+	 */
+  protected $cmiObjpropLang = '';
+  /**
+	 * cmiDatamodelAuActtype
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuActtype = '';
+  /**
+	 * cmiDatamodelAuId
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuId = '';
+  /**
+	 * cmiDatamodelAuTitle
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuTitle = '';
+  /**
+	 * cmiDatamodelAuDescr
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuDescr = '';
+  /**
+	 * cmiDatamodelAuMoveon
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuMoveon = '';
+  /**
+	 * cmiDatamodelAuLaunchmethod
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuLaunchmethod = '';
+  /**
+	 * cmiDatamodelAuMasteryscore
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuMasteryscore = '';
+  /**
+	 * cmiDatamodelAuLaunchparms
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuLaunchparms = '';
+  /**
+	 * cmiDatamodelAuUrl
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuUrl = '';
+  /**
+	 * cmiDatamodelAuEntitlementkey
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuEntitlementkey = '';
+  /**
+	 * cmiDatamodelAuObjectives
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelAuObjectives = '';
+  /**
+	 * cmiDatamodelCourseDescr
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelCourseDescr = '';
+  /**
+	 * cmiDatamodelCourseTitle
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelCourseTitle = '';
+  /**
+	 * cmiDatamodelCourseId
+	 *
+	 * @var string
+	 */
+  protected $cmiDatamodelCourseId = '';
 	/**
 	 * pid
 	 *
@@ -977,7 +1079,338 @@ class Config extends AbstractEntity
 	{
 		$this->pid = $pid;
 	}
-
+  /**
+	 * Returns the cmiSettings
+	 *
+	 * @return string $cmiSettings
+	 */
+  public function getCmiSettings()
+  {
+    return $this->cmiSettings;
+  }
+  /**
+   * Sets the cmiSettings
+   *
+   * @param string $cmiSettings
+   * @return void
+   */
+  public function setCmiSettings($cmiSettings)
+  {
+    $this->cmiSettings = $cmiSettings;
+  }
+  /**
+   * Returns the cmiEnabled
+   *
+   * @return string $cmiEnabled
+   */
+  public function getCmiEnabled()
+  {
+    return $this->cmiEnabled;
+  }
+  /**
+   * Sets the cmiEnabled
+   *
+   * @param bool $cmiEnabled
+   * @return void
+   */
+  public function setCmiEnabled($cmiEnabled)
+  {
+    $this->cmiEnabled = $cmiEnabled;
+  }
+  /**
+	 * Returns the boolean state of cmiEnabled
+	 *
+	 * @return bool
+	 */
+	public function isCmiEnabled()
+	{
+		return $this->cmiEnabled;
+	}
+  /**
+   * Returns the cmiObjpropLang
+   *
+   * @return string $cmiObjpropLang
+   */
+  public function getCmiObjpropLang()
+  {
+    return $this->cmiObjpropLang;
+  }
+  /**
+   * Sets the cmiObjpropLang
+   *
+   * @param string $cmiObjpropLang
+   * @return void
+   */
+  public function setCmiObjpropLang($cmiObjpropLang)
+  {
+    $this->cmiObjpropLang = $cmiObjpropLang;
+  }
+  /**
+   * Returns the cmiDatamodelAuActtype
+   *
+   * @return string $cmiDatamodelAuActtype
+   */
+  public function getCmiDatamodelAuActtype()
+  {
+    return $this->cmiDatamodelAuActtype;
+  }
+  /**
+   * Sets the cmiDatamodelAuActtype
+   *
+   * @param string $cmiDatamodelAuActtype
+   * @return void
+   */
+  public function setCmiDatamodelAuActtype($cmiDatamodelAuActtype)
+  {
+    $this->cmiDatamodelAuActtype = $cmiDatamodelAuActtype;
+  }
+  /**
+   * Returns the cmiDatamodelAuId
+   *
+   * @return string $cmiDatamodelAuId
+   */
+  public function getCmiDatamodelAuId()
+  {
+    return $this->cmiDatamodelAuId;
+  }
+  /**
+   * Sets the cmiDatamodelAuId
+   *
+   * @param string $cmiDatamodelAuId
+   * @return void
+   */
+  public function setCmiDatamodelAuId($cmiDatamodelAuId)
+  {
+    $this->cmiDatamodelAuId = $cmiDatamodelAuId;
+  }
+  /**
+   * Returns the cmiDatamodelAuTitle
+   *
+   * @return string $cmiDatamodelAuTitle
+   */
+  public function getCmiDatamodelAuTitle()
+  {
+    return $this->cmiDatamodelAuTitle;
+  }
+  /**
+   * Sets the cmiDatamodelAuTitle
+   *
+   * @param string $cmiDatamodelAuTitle
+   * @return void
+   */
+  public function setCmiDatamodelAuTitle($cmiDatamodelAuTitle)
+  {
+    $this->cmiDatamodelAuTitle = $cmiDatamodelAuTitle;
+  }
+  /**
+   * Returns the cmiDatamodelAuDescr
+   *
+   * @return string $cmiDatamodelAuDescr
+   */
+  public function getCmiDatamodelAuDescr()
+  {
+    return $this->cmiDatamodelAuDescr;
+  }
+  /**
+   * Sets the cmiDatamodelAuDescr
+   *
+   * @param string $cmiDatamodelAuDescr
+   * @return void
+   */
+  public function setCmiDatamodelAuDescr($cmiDatamodelAuDescr)
+  {
+    $this->cmiDatamodelAuDescr = $cmiDatamodelAuDescr;
+  }
+  /**
+   * Returns the cmiDatamodelAuMoveon
+   *
+   * @return string $cmiDatamodelAuMoveon
+   */
+  public function getCmiDatamodelAuMoveon()
+  {
+    return $this->cmiDatamodelAuMoveon;
+  }
+  /**
+   * Sets the cmiDatamodelAuMoveon
+   *
+   * @param string $cmiDatamodelAuMoveon
+   * @return void
+   */
+  public function setCmiDatamodelAuMoveon($cmiDatamodelAuMoveon)
+  {
+    $this->cmiDatamodelAuMoveon = $cmiDatamodelAuMoveon;
+  }
+  /**
+   * Returns the cmiDatamodelAuLaunchmethod
+   *
+   * @return string $cmiDatamodelAuLaunchmethod
+   */
+  public function getCmiDatamodelAuLaunchmethod()
+  {
+    return $this->cmiDatamodelAuLaunchmethod;
+  }
+  /**
+   * Sets the cmiDatamodelAuLaunchmethod
+   *
+   * @param string $cmiDatamodelAuLaunchmethod
+   * @return void
+   */
+  public function setCmiDatamodelAuLaunchmethod($cmiDatamodelAuLaunchmethod)
+  {
+    $this->cmiDatamodelAuLaunchmethod = $cmiDatamodelAuLaunchmethod;
+  }
+  /**
+   * Returns the cmiDatamodelAuMasteryscore
+   *
+   * @return string $cmiDatamodelAuMasteryscore
+   */
+  public function getCmiDatamodelAuMasteryscore()
+  {
+    return $this->cmiDatamodelAuMasteryscore;
+  }
+  /**
+   * Sets the cmiDatamodelAuMasteryscore
+   *
+   * @param string $cmiDatamodelAuMasteryscore
+   * @return void
+   */
+  public function setCmiDatamodelAuMasteryscore($cmiDatamodelAuMasteryscore)
+  {
+    $this->cmiDatamodelAuMasteryscore = $cmiDatamodelAuMasteryscore;
+  }
+  /**
+   * Returns the cmiDatamodelAuLaunchparms
+   *
+   * @return string $cmiDatamodelAuLaunchparms
+   */
+  public function getCmiDatamodelAuLaunchparms()
+  {
+    return $this->cmiDatamodelAuLaunchparms;
+  }
+  /**
+   * Sets the cmiDatamodelAuLaunchparms
+   *
+   * @param string $cmiDatamodelAuLaunchparms
+   * @return void
+   */
+  public function setCmiDatamodelAuLaunchparms($cmiDatamodelAuLaunchparms)
+  {
+    $this->cmiDatamodelAuLaunchparms = $cmiDatamodelAuLaunchparms;
+  }
+  /**
+   * Returns the cmiDatamodelAuObjectives
+   *
+   * @return string $cmiDatamodelAuObjectives
+   */
+  public function getCmiDatamodelAuObjectives()
+  {
+    return $this->cmiDatamodelAuObjectives;
+  }
+  /**
+   * Sets the cmiDatamodelAuObjectives
+   *
+   * @param string $cmiDatamodelAuObjectives
+   * @return void
+   */
+  public function setCmiDatamodelAuObjectives($cmiDatamodelAuObjectives)
+  {
+    $this->cmiDatamodelAuObjectives = $cmiDatamodelAuObjectives;
+  }
+  /**
+   * Returns the cmiDatamodelAuUrl
+   *
+   * @return string $cmiDatamodelAuUrl
+   */
+  public function getCmiDatamodelAuUrl()
+  {
+    return $this->cmiDatamodelAuUrl;
+  }
+  /**
+   * Sets the cmiDatamodelAuUrl
+   *
+   * @param string $cmiDatamodelAuUrl
+   * @return void
+   */
+  public function setCmiDatamodelAuUrl($cmiDatamodelAuUrl)
+  {
+    $this->cmiDatamodelAuUrl = $cmiDatamodelAuUrl;
+  }
+  /**
+   * Returns the cmiDatamodelAuEntitlementkey
+   *
+   * @return string $cmiDatamodelAuEntitlementkey
+   */
+  public function getCmiDatamodelAuEntitlementkey()
+  {
+    return $this->cmiDatamodelAuEntitlementkey;
+  }
+  /**
+   * Sets the cmiDatamodelAuEntitlementkey
+   *
+   * @param string $cmiDatamodelAuEntitlementkey
+   * @return void
+   */
+  public function setCmiDatamodelAuEntitlementkey($cmiDatamodelAuEntitlementkey)
+  {
+    $this->cmiDatamodelAuEntitlementkey = $cmiDatamodelAuEntitlementkey;
+  }
+  /**
+   * Returns the cmiDatamodelCourseDescr
+   *
+   * @return string $cmiDatamodelCourseDescr
+   */
+  public function getCmiDatamodelCourseDescr()
+  {
+    return $this->cmiDatamodelCourseDescr;
+  }
+  /**
+   * Sets the cmiDatamodelCourseDescr
+   *
+   * @param string $cmiDatamodelCourseDescr
+   * @return void
+   */
+  public function setCmiDatamodelCourseDescr($cmiDatamodelCourseDescr)
+  {
+    $this->cmiDatamodelCourseDescr = $cmiDatamodelCourseDescr;
+  }
+  /**
+   * Returns the cmiDatamodelCourseTitle
+   *
+   * @return string $cmiDatamodelCourseTitle
+   */
+  public function getCmiDatamodelCourseTitle()
+  {
+    return $this->cmiDatamodelCourseTitle;
+  }
+  /**
+   * Sets the cmiDatamodelCourseTitle
+   *
+   * @param string $cmiDatamodelCourseTitle
+   * @return void
+   */
+  public function setCmiDatamodelCourseTitle($cmiDatamodelCourseTitle)
+  {
+    $this->cmiDatamodelCourseTitle = $cmiDatamodelCourseTitle;
+  }
+  /**
+   * Returns the cmiDatamodelCourseId
+   *
+   * @return string $cmiDatamodelCourseId
+   */
+  public function getCmiDatamodelCourseId()
+  {
+    return $this->cmiDatamodelCourseId;
+  }
+  /**
+   * Sets the cmiDatamodelCourseId
+   *
+   * @param string $cmiDatamodelCourseId
+   * @return void
+   */
+  public function setCmiDatamodelCourseId($cmiDatamodelCourseId)
+  {
+    $this->cmiDatamodelCourseId = $cmiDatamodelCourseId;
+  }
 	/**
 	 * Returns the company
 	 *
@@ -3566,503 +3999,6 @@ class Config extends AbstractEntity
 
 	/**
 	 * Sets the lightboxSelection
-	 *
-	 * @param string $lightboxSelection
-	 * @return void
-	 */
-	public function setLightboxSelection($lightboxSelection)
-	{
-		$this->lightboxSelection = $lightboxSelection;
-	}
-
-	/**
-	 * Returns the magnifying
-	 *
-	 * @return bool $magnifying
-	 */
-	public function getMagnifying()
-	{
-		return $this->magnifying;
-	}
-
-	/**
-	 * Sets the magnifying
-	 *
-	 * @param bool $magnifying
-	 * @return void
-	 */
-	public function setMagnifying($magnifying)
-	{
-		$this->magnifying = $magnifying;
-	}
-
-	/**
-	 * Returns the sectionmenuAnchorOffset
-	 *
-	 * @return int $sectionmenuAnchorOffset
-	 */
-	public function getSectionmenuAnchorOffset()
-	{
-		return $this->sectionmenuAnchorOffset;
-	}
-
-	/**
-	 * Sets the sectionmenuAnchorOffset
-	 *
-	 * @param int $sectionmenuAnchorOffset
-	 * @return void
-	 */
-	public function setSectionmenuAnchorOffset($sectionmenuAnchorOffset)
-	{
-		$this->sectionmenuAnchorOffset = $sectionmenuAnchorOffset;
-	}
-
-	/**
-	 * Returns the sectionmenuScrollspyThreshold
-	 *
-	 * @return string sectionmenuScrollspyThreshold
-	 */
-	public function getSectionmenuScrollspyThreshold()
-	{
-		return $this->sectionmenuScrollspyThreshold;
-	}
-	
-	/**
-	 * Sets the sectionmenuScrollspyThreshold
-	 *
-	 * @param string $sectionmenuScrollspyThreshold
-	 * @return void
-	 */
-	public function setSectionmenuScrollspyThreshold($sectionmenuScrollspyThreshold)
-	{
-		$this->sectionmenuScrollspyThreshold = $sectionmenuScrollspyThreshold;
-	}
-
-	/**
-	 * Returns the sectionmenuScrollspyRootMargin
-	 *
-	 * @return string sectionmenuScrollspyRootMargin
-	 */
-	public function getSectionmenuScrollspyRootMargin()
-	{
-		return $this->sectionmenuScrollspyRootMargin;
-	}
-	
-	/**
-	 * Sets the sectionmenuScrollspyRootMargin
-	 *
-	 * @param string $sectionmenuScrollspyRootMargin
-	 * @return void
-	 */
-	public function setSectionmenuScrollspyRootMargin($sectionmenuScrollspyRootMargin)
-	{
-		$this->sectionmenuScrollspyRootMargin = $sectionmenuScrollspyRootMargin;
-	}
-
-	/**
-	 * Returns the sectionmenuStickyTop
-	 *
-	 * @return bool $sectionmenuStickyTop
-	 */
-	public function getSectionmenuStickyTop()
-	{
-		return $this->sectionmenuStickyTop;
-	}
-
-	/**
-	 * Sets the sectionmenuStickyTop
-	 *
-	 * @param bool $sectionmenuStickyTop
-	 * @return void
-	 */
-	public function setSectionmenuStickyTop($sectionmenuStickyTop)
-	{
-		$this->sectionmenuStickyTop = $sectionmenuStickyTop;
-	}
-
-	/**
-	 * Returns the sectionmenuScrollspy
-	 *
-	 * @return bool $sectionmenuScrollspy
-	 */
-	public function getSectionmenuScrollspy()
-	{
-		return $this->sectionmenuScrollspy;
-	}
-
-	/**
-	 * Sets the sectionmenuScrollspy
-	 *
-	 * @param bool $sectionmenuScrollspy
-	 * @return void
-	 */
-	public function setSectionmenuScrollspy($sectionmenuScrollspy)
-	{
-		$this->sectionmenuScrollspy = $sectionmenuScrollspy;
-	}
-
-	/**
-	 * Returns the backgroundImageEnable
-	 *
-	 * @return bool $backgroundImageEnable
-	 */
-	public function getBackgroundImageEnable()
-	{
-		return $this->backgroundImageEnable;
-	}
-
-	/**
-	 * Sets the backgroundImageEnable
-	 *
-	 * @param bool $backgroundImageEnable
-	 * @return void
-	 */
-	public function setBackgroundImageEnable($backgroundImageEnable)
-	{
-		$this->backgroundImageEnable = $backgroundImageEnable;
-	}
-
-	/**
-	 * Returns the backgroundImageSlide
-	 *
-	 * @return bool $backgroundImageSlide
-	 */
-	public function getBackgroundImageSlide()
-	{
-		return $this->backgroundImageSlide;
-	}
-
-	/**
-	 * Sets the backgroundImageSlide
-	 *
-	 * @param bool $backgroundImageSlide
-	 * @return void
-	 */
-	public function setBackgroundImageSlide($backgroundImageSlide)
-	{
-		$this->backgroundImageSlide = $backgroundImageSlide;
-	}
-
-	/**
-	 * Returns the shrinkingNavPadding
-	 *
-	 * @return string $shrinkingNavPadding
-	 */
-	public function getShrinkingNavPadding()
-	{
-		return $this->shrinkingNavPadding;
-	}
-
-	/**
-	 * Sets the shrinkingNavPadding
-	 *
-	 * @param string $shrinkingNavPadding
-	 * @return void
-	 */
-	public function setShrinkingNavPadding($shrinkingNavPadding)
-	{
-		$this->shrinkingNavPadding = $shrinkingNavPadding;
-	}
-
-	/**
-	 * Returns the sidebarMenuPosition
-	 *
-	 * @return string $sidebarMenuPosition
-	 */
-	public function getSidebarMenuPosition()
-	{
-		return $this->sidebarMenuPosition;
-	}
-
-	/**
-	 * Sets the shrinkingNavPadding
-	 *
-	 * @param string $sidebarMenuPosition
-	 * @return void
-	 */
-	public function setSidebarMenuPosition($sidebarMenuPosition)
-	{
-		$this->sidebarMenuPosition = $sidebarMenuPosition;
-	}
-
-	/**
-	 * Returns the langMenuWithFaIcon
-	 *
-	 * @return bool $langMenuWithFaIcon
-	 */
-	public function getLangMenuWithFaIcon()
-	{
-		return $this->langMenuWithFaIcon;
-	}
-
-	/**
-	 * Sets the langMenuWithFaIcon
-	 *
-	 * @param bool $langMenuWithFaIcon
-	 * @return void
-	 */
-	public function setLangMenuWithFaIcon($langMenuWithFaIcon)
-	{
-		$this->langMenuWithFaIcon = $langMenuWithFaIcon;
-	}
-
-	/**
-	 * Returns the subheaderColor
-	 *
-	 * @return string $subheaderColor
-	 */
-	public function getSubheaderColor()
-	{
-		return $this->subheaderColor;
-	}
-
-	/**
-	 * Sets the subheaderColor
-	 *
-	 * @param string $subheaderColor
-	 * @return void
-	 */
-	public function setSubheaderColor($subheaderColor)
-	{
-		$this->subheaderColor = $subheaderColor;
-	}
-
-	/**
-	 * Returns the dateFormat
-	 *
-	 * @return string $dateFormat
-	 */
-	public function getDateFormat()
-	{
-		return $this->dateFormat;
-	}
-
-	/**
-	 * Sets the dateFormat
-	 *
-	 * @param string $dateFormat
-	 * @return void
-	 */
-	public function setDateFormat($dateFormat)
-	{
-		$this->dateFormat = $dateFormat;
-	}
-
-	/**
-	 * Returns the favicon
-	 *
-	 * @return string $favicon
-	 */
-	public function getFavicon()
-	{
-		return $this->favicon;
-	}
-
-	/**
-	 * Sets the favicon
-	 *
-	 * @param string $favicon
-	 * @return void
-	 */
-	public function setFavicon($favicon)
-	{
-		$this->favicon = $favicon;
-	}
-
-	/**
-	 * Returns faLinkIcons
-	 *
-	 * @return bool $faLinkIcons
-	 */
-	public function getFaLinkIcons()
-	{
-		return $this->faLinkIcons;
-	}
-
-	/**
-	 * Sets the faLinkIcons
-	 *
-	 * @param bool $faLinkIcons
-	 * @return void
-	 */
-	public function setFaLinkIcons($faLinkIcons)
-	{
-		$this->faLinkIcons = $faLinkIcons;
-	}
-
-	/**
-	 * Returns cardFlipperOnClick
-	 *
-	 * @return bool $cardFlipperOnClick
-	 */
-	public function getCardFlipperOnClick()
-	{
-		return $this->cardFlipperOnClick;
-	}
-
-	/**
-	 * Sets the cardFlipperOnClick
-	 *
-	 * @param bool $cardFlipperOnClick
-	 * @return void
-	 */
-	public function setCardFlipperOnClick($cardFlipperOnClick)
-	{
-		$this->cardFlipperOnClick = $cardFlipperOnClick;
-	}
-
-	/**
-	 * Returns lastModifiedContentElement
-	 *
-	 * @return bool $lastModifiedContentElement
-	 */
-	public function getLastModifiedContentElement()
-	{
-		return $this->lastModifiedContentElement;
-	}
-
-	/**
-	 * Sets the lastModifiedContentElement
-	 *
-	 * @param bool $lastModifiedContentElement
-	 * @return void
-	 */
-	public function setLastModifiedContentElement($lastModifiedContentElement)
-	{
-		$this->lastModifiedContentElement = $lastModifiedContentElement;
-	}
-
-	/**
-	 * Returns recentlyUpdatedContentElements
-	 *
-	 * @return bool $recentlyUpdatedContentElements
-	 */
-	public function getRecentlyUpdatedContentElements()
-	{
-		return $this->recentlyUpdatedContentElements;
-	}
-
-	/**
-	 * Sets the recentlyUpdatedContentElements
-	 *
-	 * @param bool $recentlyUpdatedContentElements
-	 * @return void
-	 */
-	public function setRecentlyUpdatedContentElements($recentlyUpdatedContentElements)
-	{
-		$this->recentlyUpdatedContentElements = $recentlyUpdatedContentElements;
-	}
-
-	/**
-	 * Returns updated
-	 *
-	 * @return int $updated
-	 */
-	public function getUpdated()
-	{
-		return $this->updated;
-	}
-
-	/**
-	 * Sets the updated
-	 *
-	 * @param int $updated
-	 * @return void
-	 */
-	public function setUpdated($updated)
-	{
-		$this->updated = $updated;
-	}
-
-	/**
-	 * Returns gridupdated
-	 *
-	 * @return int $gridupdated
-	 */
-	public function getGridupdated()
-	{
-		return $this->gridupdated;
-	}
-
-	/**
-	 * Sets the gridupdated
-	 *
-	 * @param int $gridupdated
-	 * @return void
-	 */
-	public function setGridupdated($gridupdated)
-	{
-		$this->gridupdated = $gridupdated;
-	}
-
-	/**
-	 * Returns the sidebarSectionMobile
-	 *
-	 * @return bool $sidebarSectionMobile
-	 */
-	public function getSidebarSectionMobile()
-	{
-		return $this->sidebarSectionMobile;
-	}
-
-	/**
-	 * Sets the sidebarSectionMobile
-	 *
-	 * @param bool $sidebarSectionMobile
-	 * @return void
-	 */
-	public function setSidebarSectionMobile($sidebarSectionMobile)
-	{
-		$this->sidebarSectionMobile = $sidebarSectionMobile;
-	}
-
-	/**
-	 * Returns the sectionmenuIcons
-	 *
-	 * @return bool $sectionmenuIcons
-	 */
-	public function getSectionmenuIcons()
-	{
-		return $this->sectionmenuIcons;
-	}
-
-	/**
-	 * Sets the sectionmenuIcons
-	 *
-	 * @param bool $sectionmenuIcons
-	 * @return void
-	 */
-	public function setSectionmenuIcons($sectionmenuIcons)
-	{
-		$this->sectionmenuIcons = $sectionmenuIcons;
-	}
-
-
-
-	/**
-	 * Returns the navbarDarkMode
-	 *
-	 * @return bool $navbarDarkMode
-	 */
-	public function getNavbarDarkMode()
-	{
-		return $this->navbarDarkMode;
-	}
-
-	/**
-	 * Sets the navbarDarkMode
-	 *
-	 * @param bool $navbarDarkMode
-	 * @return void
-	 */
-	public function setNavbarDarkMode($navbarDarkMode)
-	{
-		$this->navbarDarkMode = $navbarDarkMode;
-	}
-	
-
-}
-* Sets the lightboxSelection
 	 *
 	 * @param string $lightboxSelection
 	 * @return void
