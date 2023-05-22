@@ -21,7 +21,7 @@ function getStatementsAnswered(verb, page, echartQuery) {
     qStored,
     data = [];
   // check if previuos data of echarts4 in sessiostorage and get data if applicable
-  if (stmtsQ) {
+  if (stmtsQ && stmtsQ.length > 0) {
     stmtsQ = JSON.parse(stmtsQ);
     for (let i = 0; i < stmtsQ.length; i++) {
       if (Object.keys(stmtsQ[i]).includes(echartQuery)) stmtsQ_ = stmtsQ[i];
